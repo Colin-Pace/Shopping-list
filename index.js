@@ -63,7 +63,11 @@ function focusOnItem(event) {
 
   if (item.style.borderColor === 'blue') {
     item.style.borderColor = 'black';
-  } else item.style.borderColor = 'blue';
+    item.style.borderWidth = '2px';
+  } else {
+    item.style.borderColor = 'blue';
+    item.style.borderWidth = '4px';
+  }
 }
 
 function removeItem() {
