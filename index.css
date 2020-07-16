@@ -20,6 +20,9 @@ main {
   margin: 0;
   height: 100%;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #container {
@@ -40,6 +43,10 @@ main {
   margin-bottom: 30px;
 }
 
+#add:hover {
+  background-color: #f0f0f0;
+}
+
 #add:focus {
   outline: none;
 }
@@ -55,38 +62,47 @@ main {
   margin-top: 30px;
 }
 
+#remove:hover {
+  background-color: #f0f0f0;
+}
+
 #remove:focus {
   outline: none;
 }
 
 #addFrame {
+  margin-top: -140px;
   display: flex;
-  flex-direction: column;
-  height: 100%;
-  align-items: center;
 }
 
 #input {
-  height: 200px;
+  height: 100px;
   width: 400px;
-  margin-top: 20px;
   font-size: 36px;
-  text-align: center;
+  padding-left: 35px;
   border-radius: 15px;
-  margin-top: 80px;
+}
+
+#input:hover {
+  box-shadow: 1px 1px 5px 1px lightgray;
 }
 
 #input:focus {
   outline: none;
+  box-shadow: 1px 1px 5px 1px lightgray;
 }
 
 #submitButton {
-  height: 80px;
+  height: 100px;
   width: 200px;
   background-color: white;
   font-size: 20px;
   border-radius: 15px;
-  margin-top: 60px;
+  margin-left: 20px;
+}
+
+#submitButton:hover {
+  background-color: #f0f0f0;
 }
 
 #submitButton:focus {
@@ -110,6 +126,10 @@ main {
   padding-bottom: 20px;
 }
 
+.listItem:hover {
+  background-color: #f0f0f0;
+}
+
 #list {
   display: flex;
   flex-direction: column;
@@ -121,3 +141,18 @@ main {
 #container #add {order: 1;}
 #container #list {order: 2;}
 #container #remove {order: 3;}
+
+
+@media screen and (max-width: 680px) {
+  #addFrame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  #submitButton {
+    margin-top: 40px;
+  }
+}
